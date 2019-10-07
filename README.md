@@ -1,3 +1,3 @@
 # mssc beer service 
 
-spring boot microservices example
+spring boot micro services example
