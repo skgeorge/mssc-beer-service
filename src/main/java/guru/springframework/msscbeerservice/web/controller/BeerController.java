@@ -26,6 +26,4 @@ public class BeerController {
         //todo
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
-
-
 }
