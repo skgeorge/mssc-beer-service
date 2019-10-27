@@ -19,14 +19,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class BeerControllerTest {
     @Autowired
     ObjectMapper objectMapper;
-
+    @Autowired
     MockMvc mockMvc;
+
     @Test
     void getBeerById() throws Exception{
-        mockMvc.perform(get(    "/api/v1/beer" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get(    "/api/v1/beer/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
-
     @Test
     void saveNewBeer() throws Exception {
         BeerDto beerDto = getValidBeerDto();
@@ -37,18 +37,16 @@ class BeerControllerTest {
                 .content(beerDtoJson))
                 .andExpect(status().isCreated());
     }
-
     @Test
     void updateBeerById() throws Exception {
         BeerDto beerDto = getValidBeerDto();
         String  beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
-        mockMvc.perform(put("/api/v1/beer" + UUID.randomUUID().toString())
+        mockMvc.perform(put("/api/v1/beer/" + UUID.randomUUID().toString())
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(beerDtoJson))
                 .andExpect(status().isNoContent());
     }
-
     BeerDto getValidBeerDto(){
         return BeerDto.builder()
                 .beerName("My Beer")
