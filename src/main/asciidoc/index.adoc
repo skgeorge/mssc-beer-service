@@ -1,0 +1,19 @@
+# SFG brewery Order service docs
+
+BeerOrderControllerTest makes a call to very simple service and produces three documentatiion snippets
+
+a request using curl:
+include::{snippets}/orders/curl-request.adoc[]
+
+HTTP request:
+include::{snippets}/orders/http-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/orders/http-response.adoc[]
+
+Response Body:
+include::{snippets}/orders/response-body.adoc[]
+
+Response Fields:
+include::{snippets}/orders/response-fields.adoc[]
