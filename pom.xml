@@ -23,7 +23,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
         <org.projectlombok.version>1.18.10</org.projectlombok.version>
-        <spring-restdocs.version>2.0.4.RELEASE</spring-restdocs.version>
+        <spring-restdocs.version>2.0.0.RC1</spring-restdocs.version>
     </properties>
 
     <dependencies>
